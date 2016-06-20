@@ -46,7 +46,7 @@ process.nextTick(function () {
 if(config.use_database==='true')
 {
 //Perform MySQL operations.
-});
+}
 }
 return done(null, profile);
 });
