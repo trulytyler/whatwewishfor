@@ -35,12 +35,6 @@ done(null, obj);
 
 // Use the TwitterStrategy within Passport.
 
-if(config.use_database==='true')
-{
-//Perform MySQL operations.
-return done(null, profile);
-}
-
 passport.use(new TwitterStrategy({
 consumerKey: config.twitter_api_key,
 consumerSecret:config.twitter_api_secret ,
@@ -53,9 +47,11 @@ if(config.use_database==='true')
 {
 //Perform MySQL operations.
 }
-});
+}
 return done(null, profile);
-}));
+});
+}
+));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
