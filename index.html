@@ -56,25 +56,39 @@
         <hr>
         <!-- Home Slider -->
         <div class="home-slider">
-          <ul class="slides">
-            <li>
-              <h1>We are Floyd</h1>
-            </li>
-            <li>
-              <h1>We are creative</h1>
-            </li>
-            <li>
-              <h1>We are smart</h1>
-            </li>
-          </ul>
+        <h1> Make a Wish</h1>
         </div>
       <form action="submit" id="wishwell">
           <input id="wishes" type="text"><br>
           <button class="btn btn-empty btn-md">Post to board</button>
         </form>
+        <!--test-->
+        <button  id="dbutton"> Dynamic Button </button>
+<input id="msg" type="text" name="fname" value="Denvycom Rocks!!">
+    <br/>
+<div id="twtbox"></div>    
+    
+<script>
+    window.twttr = (function(d, s, id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = {
+            _e: [],
+            ready: function(f) {
+                t._e.push(f)
+            }
+        });
+    }(document, "script", "twitter-wjs"));
+</script>
+        <!--end of test-->
+
         <!-- End Home Slider -->        
-        <hr>
-        <p class="center"><a href="#about" class="btn btn-empty btn-lg">Get Started</a></p>
+        <!-- <hr> -->
+        <!-- <p class="center"><a href="#about" class="btn btn-empty btn-lg">Get Started</a></p> -->
       </div>
     </div>
   </section>
