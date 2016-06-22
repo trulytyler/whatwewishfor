@@ -41,7 +41,6 @@ $(document).ready(function () {
         }
 
         // Create a New Tweet Element
-        
         msg  =  document.getElementById('msg').value;
         var link = document.createElement('a');
         link.setAttribute('href', 'https://twitter.com/share');
