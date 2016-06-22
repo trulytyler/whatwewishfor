@@ -55,7 +55,7 @@ $(document).ready(function () {
         tweetdiv  =  document.getElementById('twtbox');
         tweetdiv.appendChild(link);
 
-        twttr.widgets.load(); //very important
+        twttr.widgets.load();
     }
 });
 //end of test
