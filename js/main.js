@@ -1,3 +1,28 @@
+$(document).ready(function() {
+var myFirebaseRef = new Firebase("https://whatwewishfor-cc766.firebaseio.com/");
+
+var config = {
+    apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
+    authDomain: "whatwewishfor-cc766.firebaseapp.com",
+    databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
+    storageBucket: "whatwewishfor-cc766.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+  $('#wishwell').submit(function(event){
+    event.preventDefault();
+    var wish = $('#wishes').val();
+    var wishRef = myFirebaseRef.child('wishes');
+
+    wishRef.push({
+      wish: wish
+    })
+
+
+  })
+});
+///my code is above
+
 $(document).ready(function(){
 
   //Preloader

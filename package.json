@@ -14,8 +14,9 @@
 		"mysql": "2.4.3",
 		"passport": "0.2.1",
 		"passport-twitter": "1.0.2"    
+},
+"engines": {
+    "node": "6.1.0",
+    "npm": "3.8.6"
+  }
 }
-}
-
-
-
