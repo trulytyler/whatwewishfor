@@ -60,7 +60,7 @@
         </div>
       <form action="submit" id="wishwell">
           <input id="wishes" type="text"><br>
-          <button class="btn btn-empty btn-md">Post to board</button>
+          <button id="submitWish" class="btn btn-empty btn-md">Post to board</button>
         </form>
         <!--test-->
 
@@ -85,9 +85,33 @@
         });
     }(document, "script", "twitter-wjs"));
 </script>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/share" data-via="josephjohnbless">Tweet</a>
 
         <!--end of test-->
+<!--TEST 2-->
+<div class="vidBox" id="box">
+    <video class="vid" poster="http://www.rufan-redi.com/assets/lizard_goldeye.jpg" preload="metadata" controls="true" id="video1" height="240" width="360">
+        <source src="http://jcath-drg.s3.amazonaws.com/BigBuck.m4v" type="video/mp4">
+    </video>
+    <div id="other" style="display:none; width:100%; height:100%; background-color:#f0f0f0">
+        This appears after the video ends
+    </div>
+</div>
+<script>
+    var vid=document.getElementById('video1');
+    vid.addEventListener("ended", hideVideo, false);
 
+    function hideVideo() {
+        var vid=document.getElementById('video1');
+        var other=document.getElementById('other');
+        vid.removeEventListener("ended", hideVideo, false);
+        vid.style.display='none';
+        other.style.display='block';
+    }
+</script>
+</body> 
+</html>
+<!--END OF TEST 2-->
         <!-- End Home Slider -->        
         <!-- <hr> -->
         <!-- <p class="center"><a href="#about" class="btn btn-empty btn-lg">Get Started</a></p> -->
