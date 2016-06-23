@@ -157,9 +157,12 @@ p {
 #home {
   height: 100%;
   background-size: 100% 100%;
+  /*use auto^ for height to make responsive 
+  add media queries later for a mobile version*/
   overflow: hidden;
+  background-repeat: no-repeat;
   position: relative;
-  background-image: url("https://www.youtube.com/watch?v=0fYL_qiDYf0");  
+  background-image: url("../images/wishingwell.jpg");  
 }
 
 #home.pattern {
