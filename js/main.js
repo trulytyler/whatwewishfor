@@ -24,14 +24,11 @@ var config = {
 ///my code is above
 
 //New background onlick
-$bgndVideo = $('#bgndVideo');
+$bgColor = $('#home');
 
 
  $( "#submitWish" ).click(function() {
-  alert( "Handler for .click() called." );
-function vidSwitch(){
-$('#bgndVideo').remove(); 
-};
+   $bgColor.css('background', '#5acc1c'); 
 });
 
  // $( "#bgndVideo" ).append('hello');
