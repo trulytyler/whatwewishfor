@@ -28,7 +28,7 @@ $bgColor = $('#home');
 
 
  $( "#submitWish" ).click(function() {
-   $bgColor.css('background', '#5acc1c'); 
+   $bgColor.css('background', 'url("https://www.youtube.com/watch?v=0fYL_qiDYf0")'); 
 });
 
  // $( "#bgndVideo" ).append('hello');
