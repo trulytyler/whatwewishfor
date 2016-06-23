@@ -29,8 +29,9 @@ $bgndVideo = $('#bgndVideo');
 
  $( "#submitWish" ).click(function() {
   alert( "Handler for .click() called." );
- $bgndVideo.attr( "data-property" ).append('"{videoURL:' + 'dOes_0f0knw' + ',containment:' + '#video-wrapper' + ',autoPlay:true, mute:true, startAt:0, opacity:1}') 
-
+function vidSwitch(){
+$('#bgndVideo').remove(); 
+};
 });
 
  // $( "#bgndVideo" ).append('hello');
