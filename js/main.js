@@ -62,8 +62,6 @@ $.ajax({
   dataType: 'json',
   success: function info(response) {
     console.log('yay it worked');
-        return = (response.Year);
-
     var titanic = (response.Year);
     console.log('http://omdbapi.com/?s=titanic');
         console.log(titanic);
