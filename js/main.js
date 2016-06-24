@@ -3,7 +3,7 @@ var myFirebaseRef = new Firebase("https://whatwewishfor-cc766.firebaseio.com/");
 
 var config = {
     apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
-    authDomain: "https://whatwewishfor.herokuapp.com/",
+    authDomain: "whatwewishfor-cc766.firebaseapp.com",
     databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
     storageBucket: "whatwewishfor-cc766.appspot.com",
   };
@@ -57,7 +57,7 @@ $wishButton.on('click', function (event) {
 event.preventDefault();
 function wish() {
 $.ajax({
-  url: 'http://omdbapi.com/?s=titanic',
+  url: 'https://omdbapi.com/?s=titanic',
   type: 'GET',
   dataType: 'json',
   success: function info(response) {
