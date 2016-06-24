@@ -1,10 +1,9 @@
-//firebase connection & submit to databse
 $(document).ready(function() {
 var myFirebaseRef = new Firebase("https://whatwewishfor-cc766.firebaseio.com/");
 
 var config = {
     apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
-    authDomain: "whatwewishfor-cc766.firebaseapp.com",
+    authDomain: "https://whatwewishfor.herokuapp.com/",
     databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
     storageBucket: "whatwewishfor-cc766.appspot.com",
   };
@@ -22,6 +21,7 @@ var config = {
 
   })
 });
+///my code is above
 
 //New background onlick
 $bgColor = $('#home');
@@ -33,8 +33,8 @@ $bgColor = $('#home');
 //share link (open in a new window?)
 $shareButton = $('a#sharebutton')
 $ogLink = 'http://twitter.com/share?text=This%20is%20so%20easy%20%23whatwewishfor', 'window name', 'width=500, height=475'
-$wishButton = $('submitWish')
-$wishes = $('wishes')
+$wishButton = $('#submitWish')
+$wishes = $('#wishes')
 
 $shareButton.click(function(){
   window.open($ogLink);
@@ -50,30 +50,30 @@ $shareButton.click(function(){
 
 
 
-//twitter api call show wish data 
 
+$wishButton = $('#submitWish')
 
-$shareButton.on('click', function (event) {
+$wishButton.on('click', function (event) {
 event.preventDefault();
-$wishes = $('wishes');
-
-var Wish = function() {
+function wish() {
 $.ajax({
-  url: 'https://api.twitter.com/1.1/search/tweets.jsonq=%23#whatwewishfor&since_id=24012619984051000&max_id=250126199840518145&result_type=mixed&count=4',
+  url: 'http://omdbapi.com/?s=titanic',
   type: 'GET',
+  dataType: 'json',
   success: function info(response) {
-    var tweets = (response.search.tweets);
+    console.log('yay it worked');
+        return = (response.Year);
+
+    var titanic = (response.Year);
+    console.log('http://omdbapi.com/?s=titanic');
+        console.log(titanic);
 //run your code here
 //this is the message when its wrong
 }
 });
-};
-Wish();
+}
+
+wish();
 });
 
-
-  //Preloader
-  $(window).load(function() {
-    $("#loader").fadeOut();
-    $("#mask").delay(1000).fadeOut("slow");
-  });
+  
