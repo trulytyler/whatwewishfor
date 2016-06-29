@@ -1,6 +1,5 @@
-$(document).ready(function() {
-var myFirebaseRef = new Firebase("https://whatwewishfor-cc766.firebaseio.com/");
-  
+//init firebase app 
+// Initialize Firebase
   var config = {
     apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
     authDomain: "whatwewishfor-cc766.firebaseapp.com",
@@ -9,72 +8,119 @@ var myFirebaseRef = new Firebase("https://whatwewishfor-cc766.firebaseio.com/");
   };
   firebase.initializeApp(config);
 
-  $('#submitWish').submit(function(event){
+  $(document).ready(function() {
+//oauth with firebase
+var provider = new firebase.auth.TwitterAuthProvider();
+
+firebase.auth().signInWithRedirect(provider).then(function(result) {
+  // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+  // You can use these server side with your app's credentials to access the Twitter API.
+  var token = result.credential.accessToken;
+  var secret = result.credential.secret;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+//get info
+firebase.auth().getRedirectResult().then(function(result) {
+  if (result.credential) {
+    // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+    // You can use these server side with your app's credentials to access the Twitter API.
+    var token = result.credential.accessToken;
+    var secret = result.credential.secret;
+    // ...
+  }
+  // The signed-in user info.
+  var user = result.user;
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+});
+
+//functionality
+$(document).ready(function() {
+  // create object instance of my Firebase database
+  var myDBReference = new Firebase('https://whatwewishfor-cc766.firebaseio.com/');
+
+  var sourceTemplate = $('#list-template').html();
+  var template = Handlebars.compile(sourceTemplate);
+
+  // define submit event listener/handler
+  $('#message-form').submit(function(event) {
+    // prevents page refresh
     event.preventDefault();
-    var wish = $('#wishes').val();
-    var wishRef = myFirebaseRef.child('wishes');
 
-    wishRef.push({
-      wish: wish
-    })
+    // grab user input
+    var message = $('#message').val();
+    var messagesReference = myDBReference.child('messages');
+    messagesReference.push({
+      message: message
+    });
+  });
 
+  // Read functionality
+  myDBReference.child('messages').on('child_added', function(results) {
+    results.forEach(function(message) {
 
-  })
+      var data = {
+        message: message.val(),
+        id: results.key()
+      };
+
+      var templateHTML = template(data);
+
+      var $templateHTML = $(templateHTML);
+
+      $templateHTML.click(function() {
+        var messageId = $(this).data('id');
+        updateMessage(messageId);
+      })
+      $('#messages-list').append($templateHTML);
+    });
+  });
+
+  // Update Functionality
+  function updateMessage(id, message) {
+    var messageReference = new Firebase('https://whatwewishfor-cc766.firebaseio.com/' + id);
+
+    messageReference.update({
+      message: 'fu man shu'
+    });
+
+  }
+
+  // Delete functionality
+  function deleteMessage(id) {
+    var messageReference = new Firebase('https://whatwewishfor-cc766.firebaseio.com/' + id);
+
+    messageReference.remove();
+  }
+
 });
 
 
-
-///my code is above
+///my code is below
 
 //New background onlick
 $bgColor = $('#home');
 
- $( "#submitWish" ).click(function() {
-   $bgColor.css({"background": "url(https://media.giphy.com/media/IJTCcELAbVgHK/giphy-tumblr.gif)", "background-size" : "100% 120%"})
+ $("#submitWish").click(function() {
+   $bgColor.css({"background": "url(https://media.giphy.com/media/IJTCcELAbVgHK/giphy-tumblr.gif)", "background-size" : "100% 120%"});
 });
 
-//share link (open in a new window?)
-$shareButton = $('a#sharebutton')
-$ogLink = 'http://twitter.com/share?text=This%20is%20so%20easy%20%23whatwewishfor', 'window name', 'width=500, height=475'
-$wishButton = $('#submitWish')
-$wishes = $('#wishes')
-
-$shareButton.click(function(){
-  window.open($ogLink);
-  return true;
-});
-//on wish click update oglink with user input
-
-
-
-//input goes in to
-//text attricbute of share twitter 
-//new window opens
-
-
-
-
-$wishButton = $('#submitWish')
-
-$wishButton.on('click', function (event) {
-event.preventDefault();
-function wish() {
-$.ajax({
-  url: 'https://omdbapi.com/?s=titanic',
-  type: 'GET',
-  dataType: 'json',
-  success: function info(response) {
-    console.log('yay it worked');
-    var titanic = (response.Year);
-    console.log('http://omdbapi.com/?s=titanic');
-        console.log(titanic);
-//run your code here
-//this is the message when its wrong
-}
-});
-}
-
-wish();
-});
-
-  

@@ -58,23 +58,39 @@
         <h1> Make a Wish</h1>
         </div>
   
+ 
 </head>
 <body>
+
+
+<!DOCTYPE html>
+<head>
+  <!-- Firebase CDN -->
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Handlebars CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <!--css script-->
+  <link href="css/the-big-picture.css" rel="stylesheet">
+
+  <!-- custom scripts -->
+  <script src="js/lesson17.js"></script>
+
+
+<script id="list-template" type="text/x-handlebars-template">
+    <li data-id={{id}}>{{message}}</li>
+  </script>
+
   <form action="" id="message-form">
-    <input type="text" id="message">
-    <button>Post to board</button>
+    <input type="text" class="A" id="message">
+
+    <button id="submitWish" >Post to board</button>
+
   </form>
 
-      <form action="submit" id="wishwell">
-          <input id="wishes" type="text"><br>
-          <button id="submitWish" class="btn btn-empty btn-md">Post to board</button>
-        </form>
-       <a id=sharebutton class="custombutton">Tweet</a>
-        
 
-        <!-- End Home Slider -->        
-        <!-- <hr> -->
-        <!-- <p class="center"><a href="#about" class="btn btn-empty btn-lg">Get Started</a></p> -->
+  <ol id="messages-list"></ol>
       </div>
     </div>
   </section>
