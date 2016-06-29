@@ -8,7 +8,6 @@
   };
   firebase.initializeApp(config);
 
-  $(document).ready(function() {
 //oauth with firebase
 var provider = new firebase.auth.TwitterAuthProvider();
 
@@ -51,7 +50,7 @@ firebase.auth().getRedirectResult().then(function(result) {
   var credential = error.credential;
   // ...
 });
-});
+
 
 //functionality
 $(document).ready(function() {
