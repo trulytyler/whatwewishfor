@@ -35,16 +35,7 @@ if (id_token) {
     document.getElementById('name').textContent = profile.name;
   });
 }
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    $('#logout-btn').show();
-    $('#btn-login').hide();
-  } else {
-    $('#logout-btn').hide();
-    $('#btn-login').show();
 
-  }
-});
 
 // var getFoos = fetch('/api/foo', {
 //   headers: {
