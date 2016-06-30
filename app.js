@@ -33,9 +33,9 @@ if (id_token) {
     });
 }
 
-document.getElementById('btn-api').addEventListener('click', function () {
-    // Just call your API here. The header will be sent
-});
+// document.getElementById('btn-api').addEventListener('click', function () {
+//     // Just call your API here. The header will be sent
+// });
 //add firebase
 //init firebase app 
 // Initialize Firebase
@@ -166,11 +166,11 @@ $(document).ready(function() {
 
 ///my code is below
 
-//New background onlick
-$bgColor = $('#home');
+// //New background onlick
+// $bgColor = $('#home');
 
- $("#submitWish").click(function() {
-   $bgColor.css({"background": "url(https://media.giphy.com/media/IJTCcELAbVgHK/giphy-tumblr.gif)", "background-size" : "100% 120%"});
-});
+//  $("#submitWish").click(function() {
+//    $bgColor.css({"background": "url(https://media.giphy.com/media/IJTCcELAbVgHK/giphy-tumblr.gif)", "background-size" : "100% 120%"});
+// });
 
 
