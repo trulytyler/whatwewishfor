@@ -39,6 +39,8 @@ document.getElementById('btn-api').addEventListener('click', function () {
 //add firebase
 //init firebase app 
 // Initialize Firebase
+  $(document).ready(function() {
+
   var config = {
     apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
     authDomain: "whatwewishfor-cc766.firebaseapp.com",
@@ -53,6 +55,7 @@ user.firebase_data = {
   company: !user.isSocial ? context.connection.replace(/\./g, '-') : null,
   foo: 'bar'
 };
+});
 
 
 // //oauth with firebase
