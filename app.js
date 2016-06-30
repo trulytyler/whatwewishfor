@@ -1,15 +1,15 @@
 
 
-//init firebase app 
-// Initialize Firebase
-  // var config = {
-  //   apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
-  //   authDomain: "whatwewishfor-cc766.firebaseapp.com",
-  //   databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
-  //   storageBucket: "whatwewishfor-cc766.appspot.com",
-  // };
+init firebase app 
+Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
+    authDomain: "whatwewishfor-cc766.firebaseapp.com",
+    databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
+    storageBucket: "whatwewishfor-cc766.appspot.com",
+  };
 
-  // firebase.initializeApp(config);
+  firebase.initializeApp(config);
 
 
 
@@ -96,7 +96,11 @@ $bgColor = $('#home');
 
 
 
-
+user.firebase_data = {
+  user_id: new Buffer(user.email).toString('base64'),
+  company: !user.isSocial ? context.connection.replace(/\./g, '-') : null,
+  foo: 'bar'
+}
 
 
 
@@ -139,6 +143,4 @@ if (id_token) {
 // document.getElementById('btn-api').addEventListener('click', function () {
 //     // Just call your API here. The header will be sent
 // });
-//add firebase
-//init firebase app 
-// Initialize Firebase
+
