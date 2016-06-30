@@ -96,7 +96,16 @@
     <p>Welcome: <span id="name"></span></p>
 <input id="btn-login" class="btn-login" type="submit" />
   </form>
-
+<!-- We'll also add the ability to logout as well as provide some additional
+              user info once a user is logged in -->
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="clearfix top-bar">
+              <div id="email" class="pull-left"></div>
+              <div class="pull-right">
+                <a onclick="logout()" class="btn btn-danger" id="logout-btn">Logout</a>
+              </div>
+            </div>
+          </div>
 
   <ol id="messages-list"></ol>
       </div>
