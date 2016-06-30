@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
 
   var config = {
     apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
@@ -7,7 +7,7 @@ $(document).ready(function() {
     storageBucket: "whatwewishfor-cc766.appspot.com",
   };
   firebase.initializeApp(config);
-});
+
 
 // user.firebase_data = {
 //   user_id: new Buffer(user.email).toString('base64'),
