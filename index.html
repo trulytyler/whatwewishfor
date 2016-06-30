@@ -8,7 +8,11 @@
         <script>try{Typekit.load();}catch(e){}</script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+ <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Handlebars CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
         <!-- font awesome from BootstrapCDN -->
         <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -23,7 +27,7 @@
             <div class="login-page clearfix">
               <div id="login-box" class="login-box auth0-box before">
                 <img src="https://i.cloudup.com/StzWWrY34s.png" />
-                <h3>Auth0 Example</h3>
+                <h3>Make A Wish</h3>
                 <p>Zero friction identity infrastructure, built for developers</p>
                 <a id="btn-login" class="btn btn-primary btn-lg btn-block">Log in</a>
               </div>
@@ -31,6 +35,19 @@
                 <h1 id="logo"><img src="auth0_logo_final_blue_RGB.png" /></h1>
                 <h2>Welcome <span id="nick" class="nickname"></span></h2>
                 <button id="btn-api" class="btn btn-lg btn-primary btn-api">Call API</button>
+                <script id="list-template" type="text/x-handlebars-template">
+    <li data-id={{id}}>{{message}}</li>
+  </script>
+
+  <form action="" id="message-form">
+    <input type="text" class="A" id="message">
+
+    <button id="submitWish" >Post to board</button>
+
+  </form>
+
+
+  <ol id="messages-list"></ol>
               </div>
             </div>
         </div>
