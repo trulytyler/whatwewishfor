@@ -92,7 +92,7 @@ if (id_token) {
 
       $templateHTML.click(function() {
         var messageId = $(this).data('id');
-        updateMessage(messageId);
+        deleteMessage(messageId);
       })
       $('#messages-list').append($templateHTML);
     });
