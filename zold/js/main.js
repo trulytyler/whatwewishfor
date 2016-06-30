@@ -9,11 +9,11 @@
   firebase.initializeApp(config);
 
 
-user.firebase_data = {
-  user_id: new Buffer(user.email).toString('base64'),
-  company: !user.isSocial ? context.connection.replace(/\./g, '-') : null,
-  foo: 'bar'
-};
+// user.firebase_data = {
+//   user_id: new Buffer(user.email).toString('base64'),
+//   company: !user.isSocial ? context.connection.replace(/\./g, '-') : null,
+//   foo: 'bar'
+// };
 // //oauth with firebase
 // var provider = new firebase.auth.TwitterAuthProvider();
 
