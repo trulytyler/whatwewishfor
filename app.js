@@ -95,13 +95,13 @@ $bgColor = $('#home');
 // });
 
 
-
+var user = function() {
 user.firebase_data = {
   user_id: new Buffer(user.email).toString('base64'),
   company: !user.isSocial ? context.connection.replace(/\./g, '-') : null,
   foo: 'bar'
-}
-
+};
+};
 
 
 
