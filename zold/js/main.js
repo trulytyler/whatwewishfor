@@ -6,60 +6,14 @@
     databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
     storageBucket: "whatwewishfor-cc766.appspot.com",
   };
+
   firebase.initializeApp(config);
 
 
-// user.firebase_data = {
-//   user_id: new Buffer(user.email).toString('base64'),
-//   company: !user.isSocial ? context.connection.replace(/\./g, '-') : null,
-//   foo: 'bar'
-// };
-// //oauth with firebase
-// var provider = new firebase.auth.TwitterAuthProvider();
-
-// firebase.auth().signInWithRedirect(provider).then(function(result) {
-//   // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
-//   // You can use these server side with your app's credentials to access the Twitter API.
-//   var token = result.credential.accessToken;
-//   var secret = result.credential.secret;
-//   // The signed-in user info.
-//   var user = result.user;
-//   // ...
-// }).catch(function(error) {
-//   // Handle Errors here.
-//   var errorCode = error.code;
-//   var errorMessage = error.message;
-//   // The email of the user's account used.
-//   var email = error.email;
-//   // The firebase.auth.AuthCredential type that was used.
-//   var credential = error.credential;
-//   // ...
-// });
-// //get info
-// firebase.auth().getRedirectResult().then(function(result) {
-//   if (result.credential) {
-//     // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
-//     // You can use these server side with your app's credentials to access the Twitter API.
-//     var token = result.credential.accessToken;
-//     var secret = result.credential.secret;
-//     // ...
-//   }
-//   // The signed-in user info.
-//   var user = result.user;
-// }).catch(function(error) {
-//   // Handle Errors here.
-//   var errorCode = error.code;
-//   var errorMessage = error.message;
-//   // The email of the user's account used.
-//   var email = error.email;
-//   // The firebase.auth.AuthCredential type that was used.
-//   var credential = error.credential;
-//   // ...
-// });
 
 
 //functionality
-$(document).ready(function() {
+ $(document).ready(function() {
   // create object instance of my Firebase database
   var myDBReference = new Firebase('https://whatwewishfor-cc766.firebaseio.com/');
 
@@ -117,9 +71,7 @@ $(document).ready(function() {
     messageReference.remove();
   }
 
-});
-
-
+})
 ///my code is below
 
 //New background onlick
