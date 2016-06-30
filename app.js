@@ -1,14 +1,5 @@
 
 
-  var config = {
-    apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
-    authDomain: "whatwewishfor-cc766.firebaseapp.com",
-    databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
-    storageBucket: "whatwewishfor-cc766.appspot.com",
-  };
-  firebase.initializeApp(config);
-
-
 // user.firebase_data = {
 //   user_id: new Buffer(user.email).toString('base64'),
 //   company: !user.isSocial ? context.connection.replace(/\./g, '-') : null,
@@ -63,6 +54,13 @@
 
 //functionality
 $(document).ready(function() {
+      var config = {
+    apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
+    authDomain: "whatwewishfor-cc766.firebaseapp.com",
+    databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
+    storageBucket: "whatwewishfor-cc766.appspot.com",
+  };
+  firebase.initializeApp(config);
   // create object instance of my Firebase database
   var myDBReference = new Firebase('https://whatwewishfor-cc766.firebaseio.com/');
 
