@@ -54,7 +54,7 @@
 
 //functionality
 $(document).ready(function() {
-      var config = {
+  var config = {
     apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
     authDomain: "whatwewishfor-cc766.firebaseapp.com",
     databaseURL: "https://whatwewishfor-cc766.firebaseio.com",
