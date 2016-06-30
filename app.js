@@ -7,7 +7,7 @@ $(document).ready(function() {
     storageBucket: "whatwewishfor-cc766.appspot.com",
   };
   firebase.initializeApp(config);
-
+});
 
 // user.firebase_data = {
 //   user_id: new Buffer(user.email).toString('base64'),
@@ -98,7 +98,7 @@ $(document).ready(function() {
       $templateHTML.click(function() {
         var messageId = $(this).data('id');
         updateMessage(messageId);
-      })
+      });
       $('#messages-list').append($templateHTML);
     });
   });
