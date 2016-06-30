@@ -1,6 +1,6 @@
 
 
-init firebase app 
+// init firebase app 
 Initialize Firebase
   var config = {
     apiKey: "AIzaSyDukY4vwsg3rqecCtDVkiPKB_-ntM_M5KY",
