@@ -1,142 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-  	<meta charset="utf-8">
-    <title>What We Wish</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.auth0.com/js/lock-9.0.min.js"></script>
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <script src="//use.typekit.net/iws6ohy.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-
-    <!-- Color Scheme -->
-    <link rel="stylesheet" type="text/css" href="css/colors/red.css">
-<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-
-  </head>
-<body>  
-
-  <!-- Preloader
-  <div id="mask">
-    <div id="loader">      
-    </div>
-  </div>
-   End Preloader -->
-
-  <!-- Video Background-->
-  <!-- <div id="video-wrapper"></div>
-  <a id="bgndVideo" class="player" data-property="{videoURL:'',containment:'#video-wrapper',autoPlay:true, mute:true, startAt:0, opacity:1}">My video</a> -->
-  <!--   <div id="video-wrapper"></div>
-  <a id="bgndVideo" class="player" data-property="{videoURL:'Lxdfg0drTcw',containment:'#video-wrapper',autoPlay:true, mute:true, startAt:0, opacity:1}">My video</a> -->
-  
-	<!-- Home Section -->  
-  <section id="home">    
-    <div class="container">
-      <div class="hero">
-        <hr>
-        <!-- Home Slider -->
-        <div class="home-slider">
-        <h1> Make a Wish</h1>
-        </div>
-  
- 
-</head>
-<body>
+        <!-- font awesome from BootstrapCDN -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 
-<!DOCTYPE html>
-<head>
-  <!-- Firebase CDN -->
-  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-  <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <!-- Handlebars CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-  <!--css script-->
-  <link href="css/the-big-picture.css" rel="stylesheet">
+        <script src="auth0-variables.js"> </script>
 
-  <!-- custom scripts -->
-
-
-<script id="list-template" type="text/x-handlebars-template">
-    <li data-id={{id}}>{{message}}</li>
-  </script>
-
-  <form action="" id="message-form">
-    <input type="text" class="A" id="message">
-
-    <button id="submitWish" >Post to board</button>
-
-  </form>
-
-
-  <ol id="messages-list"></ol>
-      </div>
-    </div>
-  </section>
-  <!-- End Home Section -->
-
- <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <link href="app.css" rel="stylesheet">
+    </head>
+    <body class="home">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            <div class="login-page clearfix">
+              <div id="login-box" class="login-box auth0-box before">
+                <img src="https://i.cloudup.com/StzWWrY34s.png" />
+                <h3>Auth0 Example</h3>
+                <p>Zero friction identity infrastructure, built for developers</p>
+                <a id="btn-login" class="btn btn-primary btn-lg btn-block">Log in</a>
+              </div>
+              <div id="logged-in-box" class="logged-in-box auth0-box logged-in" style="display: none;">
+                <h1 id="logo"><img src="auth0_logo_final_blue_RGB.png" /></h1>
+                <h2>Welcome <span id="nick" class="nickname"></span></h2>
+                <button id="btn-api" class="btn btn-lg btn-primary btn-api">Call API</button>
+              </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/share" data-via="josephjohnbless">Tweet</a>                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
-    </nav>
-  
-
-
-
-    
-
-
-  
- 
-  <!-- Main.js File -->  
-  <script type="text/javascript" src="js/main.js"></script>
-
-</body>
+        <script src="app.js"> </script>
+    </body>
 </html>
