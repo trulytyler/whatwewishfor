@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Documentation - Floyd - One Page Responsive Parallax Theme</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/doc.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+   
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  </head>
+
+  <body>   
+
+    <div class="container">
+    	<div class="col-xs-12 col-sm-3" id="sidebar" role="navigation">
+        <div class="list-group">
+        	<span class="list-group-item">Table Of Contents</span>
+          <a href="#html" class="list-group-item">HTML Structure</a>
+          <a href="#css" class="list-group-item">CSS Files and Structure</a>
+          <a href="#images" class="list-group-item">Images</a>
+          <a href="#js" class="list-group-item">JavaScript</a>
+          <a href="#maps" class="list-group-item">Google Maps Configuration</a>
+          <a href="#form" class="list-group-item">Contact Form Configuration</a>
+          <a href="#credits" class="list-group-item">Sources and Credits</a>
+          <a href="#faq" class="list-group-item">FAQ</a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-9">        
+        <div class="jumbotron">
+          <h1>Floyd - One Page Parallax Theme</h1>
+          <p>By: <a href="http://carmelopullara.com" target="_blank">Gazen</a></p>
+          <p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/Gazen">here</a>. Thanks so much!</p>
+          <div class="clearfix"></div>
+        </div>
+        <div id="html" class="section">
+        	<div class="page-header">
+        		<h2>HTML Structure</h2>
+        	</div>
+        	<article>
+        		<h3>The general page skeleton:</h3>        		
+        		<pre class="prettyprint">&lt;div id=&quot;mask&quot;&gt;
+...
+&lt;/div&gt;
+&lt;!-- End Preloader --&gt;
+
+&lt;!-- Home Section --&gt;  
+&lt;section id=&quot;home&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End Home Section --&gt;
+
+&lt;!-- Header --&gt;
+&lt;header class=&quot;navbar navbar-default topnav&quot; role=&quot;banner&quot;&gt;
+...
+&lt;/header&gt;
+&lt;!-- End Header --&gt;  
+
+&lt;!-- About Section --&gt;  
+&lt;section id=&quot;about&quot; class=&quot;section&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End About Section --&gt;
+
+&lt;!-- Team Section --&gt;    
+&lt;section id=&quot;team&quot; class=&quot;section&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End Team Section --&gt;
+
+&lt;!-- Numbers Section --&gt;
+&lt;section id=&quot;numbers&quot; class=&quot;parallax&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End Numbers Section --&gt;
+
+&lt;!-- Services Section --&gt;
+&lt;section id=&quot;services&quot; class=&quot;section&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End Services Section --&gt;
+
+&lt;!-- Portfolio Section --&gt;    
+&lt;section id=&quot;portfolio&quot; class=&quot;section&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End Portfolio Section --&gt;
+
+&lt;!-- Pricing Section --&gt;
+&lt;section id=&quot;pricing&quot; class=&quot;section&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End Pricing Section --&gt;
+
+&lt;!-- Clients Section --&gt;
+&lt;section id=&quot;clients&quot; class=&quot;section&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End Clients Section --&gt;
+
+&lt;!-- Begin Contact Section--&gt;
+&lt;section id=&quot;contact&quot; class=&quot;section&quot;&gt;
+...
+&lt;/section&gt;
+&lt;!-- End Contact Section--&gt;
+
+&lt;!-- Footer --&gt;
+&lt;footer&gt;
+...
+&lt;/footer&gt;
+&lt;!-- End Footer --&gt;</pre>
+            <p>The <b>'mask'</b> div, contains the page preloader.</p>
+            <p>We have two different classes for sections:</p>
+            <ul>
+              <li><b>section</b> - Is the default section, with no background image.</li>
+              <li><b>parallax</b> - Is used to give a parallax effect to sections with background image. </li>
+            </ul>
+						<h3>Portfolio</h3>
+						<p>The portfolio section is split into 3 parts: filters, grid and extended project</p>
+						<pre class="prettyprint">&lt;!-- Portfolio Section --&gt;
+&lt;section id=&quot;portfolio&quot; class=&quot;section&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;title col-md-8 col-sm-10 col-xs-12&quot;&gt;
+    ...
+    &lt;/div&gt;
+    &lt;!-- Portfolio Filters --&gt;
+    &lt;ul id=&quot;filters&quot;&gt;
+    ...
+    &lt;/ul&gt;
+    &lt;!-- End Portfolio Filters --&gt;
+
+    &lt;div class=&quot;portfolio-top&quot;&gt;   
+
+    &lt;!-- Portfolio Grid --&gt;
+    &lt;ul id=&quot;portfolio-grid&quot;&gt;
+    ...
+    &lt;/ul&gt;
+    &lt;!-- End Portfolio Grid --&gt;
+
+    &lt;!-- Ajax Loaded Portfolio --&gt;
+    &lt;div id=&quot;project-extended&quot;&gt;
+    ...
+    &lt;/div&gt;
+    &lt;!-- End Ajax Loaded Portfolio --&gt;
+
+    &lt;div class=&quot;portfolio-bottom&quot;&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- End Portfolio Section --&gt;</pre>
+            <p><b>Warning:</b> do not remove the <b>'portfolio-top'</b> and <b>'portfolio-bottom'</b> divs, without them the ajax portfolio will not work.</p>					
+						<h4>1) Filters</h4>
+						<pre class="prettyprint">
+&lt;!-- Portfolio Filters --&gt;
+&lt;ul id=&quot;filters&quot;&gt;
+  &lt;li class=&quot;filter&quot; data-filter=&quot;all&quot;&gt;All&lt;/li&gt;
+  &lt;li class=&quot;filter&quot; data-filter=&quot;graphic&quot;&gt;Graphic&lt;/li&gt;
+  &lt;li class=&quot;filter&quot; data-filter=&quot;photography&quot;&gt;Photography&lt;/li&gt;
+  &lt;li class=&quot;filter&quot; data-filter=&quot;branding&quot;&gt;Branding&lt;/li&gt;
+  &lt;li class=&quot;filter&quot; data-filter=&quot;video&quot;&gt;Video&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- End Portfolio Filters --&gt;</pre>
+						<p>If you want to change the filters you just need to change the <b>text</b> and the <b>'data-filter'</b> attribute.</p>
+						<h3>2) Grid</h3>
+						<pre class="prettyprint">&lt;!-- Portfolio Grid --&gt;
+&lt;ul id=&quot;portfolio-grid&quot;&gt;
+  &lt;li class=&quot;mix photography branding mix_all&quot;&gt;
+    &lt;img src=&quot;images/portfolio/1.jpg&quot;&gt;
+    &lt;a href=&quot;project-1.html&quot; class=&quot;open-project&quot;&gt;
+      &lt;div class=&quot;project-overlay&quot;&gt;
+        &lt;i class=&quot;fa fa-plus-circle fa-3x&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;project-name&quot;&gt;Silk Light&lt;/span&gt;
+        &lt;span&gt;Photography / Branding&lt;/span&gt;         
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- End Portfolio Grid --&gt;</pre>
+						<p>Each element is composed of:</p>
+						<ul>
+							<li><b>'&lt;li&gt;'</b>: To work with the filters every '&lt;li&gt;' tag must have the classes <b>mix, mix_all</b> and the filter class (one or more), for example <b>photography</b> and <b>branding</b></li>
+							<ul>
+								<li><b>Project image:</b> Located in <b>images/portfolio</b> folder. <b>Important:</b> insert images with the same height, otherwise the grid may not work well.</li>
+								<li><b>'&lt;a&gt;':</b> The 'href' attribute of this tag must link to an existing html file, in this case <b>project-1.html</b></li>
+								<ul>
+									<li><b>'project-overlay':</b> contains name and category of the project and an icon to expand it.</li>
+								</ul>
+							</ul>
+						</ul>
+						<h3>3) Extended Project</h3>
+						<p>The external project is loaded via ajax in <b>'project-content',</b> inside the <b>'project-extended'</b> div.</p>
+						<pre class="prettyprint">&lt;!-- Ajax Loaded Portfolio --&gt;
+&lt;div id=&quot;project-extended&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;ul id=&quot;project-controls&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot; id=&quot;close-project&quot;&gt;
+          &lt;i class=&quot;fa fa-times fa-2x&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id=&quot;project-content&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Ajax Loaded Portfolio --&gt;</pre>
+						<h4>Project page</h4>
+						<p>The project page is an html file located in the <b>root directory</b> of the site (where there is the index.html file). Its structure is the following</p>
+						<pre class="prettyprint">&lt;div id=&quot;project&quot;&gt;
+  &lt;div class=&quot;col-md-6&quot;&gt;
+    &lt;div class=&quot;project-media&quot;&gt;
+      &lt;div class=&quot;project-slider&quot;&gt;
+        &lt;ul class=&quot;slides&quot;&gt;
+          &lt;li&gt;&lt;img src=&quot;images/portfolio/1.jpg&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/portfolio/2.jpg&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/portfolio/3.jpg&quot;&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-6&quot;&gt;
+    &lt;div class=&quot;project-info&quot;&gt;
+      &lt;h1&gt;Silk Light&lt;/h1&gt;
+      &lt;div class=&quot;project-category&quot;&gt;				
+        &lt;span class=&quot;border&quot;&gt;&lt;/span&gt;
+        &lt;span&gt;Branding / Photography&lt;/span&gt;
+        &lt;span class=&quot;border&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;center&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+      &lt;p class=&quot;center&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;Visit website&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+					<p>If you don't want to use the slider, you just need to replace the <b>'project-slider'</b> div with a simple <b>img</b> tag. <b>Like this:</b></p>
+					<pre class="prettyprint">&lt;div class=&quot;project-media&quot;&gt;
+	&lt;img src=&quot;images/portfolio/1.jpg&quot;&gt;
+&lt;/div&gt;</pre>
+						<p>If you want to use a <b>video</b> instead of images, do the following:</p>
+						<pre class="prettyprint">&lt;div class=&quot;project-media&quot;&gt;
+	&lt;iframe src=&quot;http://www.youtube.com/embed/Lxdfg0drTcw&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+						<p>* Replace with the url of the video you want.</p>
+        	</article>
+        </div>
+        <div id="css" class="section">
+        	<div class="page-header">
+        		<h2>CSS Files and Structure</h2>
+        	</div>
+        	<article>
+        		<div class="alert alert-warning">
+        			<b>Warning!</b> Unless you are familiar with <b>CSS</b>, I strongly advise you not to play around with these files.
+      			</div>
+            <p>All css files are in <b>/css/</b> folder.</p>
+      			<h3>Files:</h3>
+      			<ul>
+      				<li><b>Colors</b></li>
+      				<ul>
+      					<li><b>black.css</b> - Black color scheme</li>
+      					<li><b>blue.css</b> - Blue color scheme</li>
+      					<li><b>green.css</b> - Green color scheme</li>
+      					<li><b>red.css</b> - Red color scheme</li>
+      					<li><b>yellow.css</b> - Yellow color scheme</li>
+      				</ul>
+      				<li><b>animate.css</b> - CSS3 animations</li>
+      				<li><b>bootstrap.css</b> - Bootstrap Framework</li>
+              <li><b>bootstrap.min.css</b> - Minified Bootstrap Framework</li>
+      				<li><b>flexslider.css</b> - Flexslider style</li>
+      				<li><b>font-awesome.css</b> - Icon font</li>
+      				<li><b>owl-carousel.css</b> - Horizontal carousel</li>
+      				<li><b>style.css</b> - The main CSS file.</li>
+      			</ul>
+        	</article>
+        </div>
+        <div id="images" class="section">
+        	<div class="page-header">
+        		<h2>Images</h2>
+        	</div>
+        	<article>
+            <p>All images are in <b>/images/</b> folder.</p>
+        		<p>To change the images (e.g Portfolio images, or team component photos), you just need to replace the existing with the new images.</p>
+        		<h3>Folder structure:</h3>
+        		<ul>
+        			<li><b>/bg/</b> - Contains all background images</li>
+        			<li><b>/clients/</b> - Contains clients logos</li>
+        			<li><b>/portfolio/</b> - Contains projects images</li>
+        			<li><b>/team/</b> - Contains team components photos</li>
+        			<li><b>/testimonials/</b> - Contains testimonials photos</li>
+        		</ul>
+        	</article>
+        </div>
+        <div id="js" class="section">
+        	<div class="page-header">
+        		<h2>JavaScript</h2>
+        	</div>
+        	<article>
+        		<div class="alert alert-warning">
+        			<b>Warning!</b> Unless you are familiar with <b>jQuery</b>, I strongly advise you not to play around with these files.
+      			</div>
+            <p>All scripts are in <b>/js/</b> folder and they are called at the bottom of the page to make website load faster.</p>
+            <pre class="prettyprint">&lt;!-- JS Libraries --&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/flexslider.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.backstretch.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.nav.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.mb.YTPlayer.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.appear.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.countTo.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.mixitup.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/owl.carousel.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.mb.YTPlayer.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.validation.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/respond.js&quot;&gt;&lt;/script&gt;
+  &lt;!-- Google Maps JS File --&gt;
+  &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;sensor=false&quot;&gt;&lt;/script&gt;
+
+  &lt;!-- Main.js File --&gt;  
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/main.js&quot;&gt;&lt;/script&gt;</pre>
+      			<h3>Libraries:</h3>
+      			<ul>      				
+              <li><b>jquery.min.js</b> - jQuery - Javascript framework</li>
+      				<li><b>bootstrap.js</b> - Bootstrap framework</li>
+              <li><b>bootstrap.min.js</b> - Minified Bootstrap framework</li>
+      				<li><b>flexslider.js</b> - Content slider</li>
+      				<li><b>jquery.appear.js</b> - jQuery plugin for tracking element's appearance</li>
+      				<li><b>jquery.backstretch.min.js</b> - jQuery plugin for images resizing</li>
+      				<li><b>jquery.countTo.js</b> - A jQuery plugin that will count up (or down) to a target number at a specified speed.</li>
+      				<li><b>jquery.mb.YTPlayer.js</b> - Youtube video background</li>
+      				<li><b>jquery.mixitup.min.js</b> - Portfolio filtering plugin</li>
+      				<li><b>jquery.nav.js</b> - Smart navigation when user scrolls on one-page sites.</li>
+      				<li><b>jquery.validation.min.js</b> - Forms validation</li>
+              <li><b>respond.js</b> - Enable Media Queries (for IE 6-8)</li>
+      				<li><b>owl.carousel.min.js</b> - Simple horizontal carousel</li>
+      			</ul>
+      			<h3>main.js</h3>
+      			<p>This is the main javascript file, <b>you can make your changes here.</b></p>
+      			<h3>parallax-bg.js</h3>
+            <p>Is called only in the <b>Full Width Parallax Slider</b> version. <b>Don't include it if you don't want the slideshow.</b></p>
+      			<p>Simple script to set a slider of images as background of the <b>Home section</b>.</p>
+      			<pre class="prettyprint">$(document).ready(function(){
+	//Home Image Slider
+	$.backstretch([
+	  &quot;images/bg/1.jpg&quot;,
+	  &quot;images/bg/2.jpg&quot;,
+	  &quot;images/bg/3.jpg&quot;    
+	], {duration: 4500, fade: 'slow'});
+	
+});</pre>
+						<p>You can define images, duration and effect. If you want you can add more images.</p>
+						<h3>video-bg.js</h3>
+            <p>Is called only in the <b>Video Background</b> version. <b>Don't include it if you don't want the video background.</b></p>
+						<p>Use a Youtube video as background of the <b>Home section</b>.</p>
+            <pre class="prettyprint">$(document).ready(function(){
+  //Video Background
+  $(&quot;.player&quot;).mb_YTPlayer();
+});</pre>
+          <p>To work fine, this script needs an '&lt;a&gt;' tag with the 'player' class and the . Like this:</p>
+          <pre class="prettyprint">&lt;a id=&quot;bgndVideo&quot; class=&quot;player&quot; data-property=&quot;{videoURL:'Lxdfg0drTcw',containment:'#video-wrapper',autoPlay:true, mute:true, startAt:0, opacity:1}&quot;&gt;My video&lt;/a&gt;</pre>
+          <p>In the 'data-property' you can configure the video.</p>
+          <ul>
+            <li><b>videoURL</b> - You must enter the last part of the url of the youtube video, <b>i.e</b> for this http://www.youtube.com/watch?v=Lxdfg0drTcw, you need to enter <b>Lxdfg0drTcw</b></li>
+            <li><b>containment</b> - The container of the video, don't forget to call it <b>'#video-wrapper'</b></li>
+            <li><b>autoplay</b> - If is set to <b>true</b>, the video will start automatically.</li>
+            <li><b>mute</b> - You can decide whether to enable the audio of the video</li>
+            <li><b>startAt</b> - You can decide which minute should start the video.</li>
+            <li><b>opacity</b> - The opacity on the video</li>
+          </ul>
+        	</article>
+        </div>
+        <div id="maps" class="section">
+          <div class="page-header">
+            <h1>Google Maps Configuration</h1>
+          </div>
+          <article>
+            <p>In the main.js file, you can define your latitude and longitude. To set them, do the following:</p>
+            <p>Open the <b>main.js</b> file, in the <b>/js/</b> folder, and go to the line 150:</p>
+            <pre class="prettyprint">var myLatlng = new google.maps.LatLng(40.773328,-73.960088); // &lt;- Your latitude and longitude</pre>
+            <p>Replace <b>'40.773328,-73.960088'</b> with your latitude and longitude <b>(without spaces).</b> You can find them <a href="http://universimmedia.pagesperso-orange.fr/geo/loc.htm">here</a></p>
+          </article>
+        </div>
+        <div id="form" class="section">
+          <div class="page-header">
+            <h1>Contact Form Configuration</h1>
+          </div>
+          <article>
+            <p>The contact form is submitted without page refresh (AJAX), you just need to set your email address in the <b>contact.php</b> file.</p>
+            <pre class="prettyprint lang-php">$to = &quot;email@yourdomain.com&quot;; # &lt;--- Your Email</pre>
+            <p>Replace <b>email@domain.com</b> with your email address. That's it.</p>
+          </article>
+        </div>
+        <div id="credits" class="section">
+          <div class="page-header">
+            <h1>Sources and Credits</h1>
+          </div>
+          <article>
+            <ul>
+              <li>Fonts</li>
+              <ul>
+                <li><a target="_blank" href="http://www.google.com/fonts/specimen/Lato">Lato</a></li>
+              </ul>
+              <li>CSS</li>
+              <ul>
+                <li><a target="_blank" href="https://github.com/daneden/animate.css">animate.css</a></li>
+                <li><a target="_blank" href="https://github.com/twbs/bootstrap">bootstrap.css</a></li>
+                <li><a target="_blank" href="https://github.com/FortAwesome/Font-Awesome">font-awesome.css</a></li>
+              </ul>
+              <li>JavaScript</li>
+              <ul>
+                <li><a target="_blank" href="https://github.com/twbs/bootstrap">bootstrap.js</a></li>
+                <li><a target="_blank" href="https://github.com/woothemes/flexslider">flexslider.js</a></li>
+                <li><a target="_blank" href="https://github.com/bas2k/jquery.appear/">jquery.appear.js</a></li>
+                <li><a target="_blank" href="https://github.com/srobbin/jquery-backstretch‎">jquery.backstretch.min.js</a></li>
+                <li><a target="_blank" href="https://github.com/mhuggins/jquery-countTo">jquery.countTo.js</a></li>
+                <li><a target="_blank" href="https://github.com/pupunzi/jquery.mb.YTPlayer">jquery.mb.YTPlayer.js</a></li>
+                <li><a target="_blank" href="http://mixitup.io/">jquery.mixitup.min.js</a></li>
+                <li><a target="_blank" href="https://github.com/davist11/jQuery-One-Page-Nav‎">jquery.nav.js</a></li>
+                <li><a target="_blank" href="https://github.com/jzaefferer/jquery-validation">jquery.validation.min.js</a></li>
+                <li><a target="_blank" href="https://github.com/OwlFonk/OwlCarousel">owl.carousel.min.js</a></li>
+                <li><a target="_blank" href="https://github.com/scottjehl/Respond">respond.js</a></li>
+              </ul>              
+            </ul>
+          </article>
+        </div>
+        <div id="faq" class="section">
+          <div class="page-header">
+            <h1>FAQ</h1>
+          </div>
+          <article>
+            <h3>Hot to change the color scheme?</h3>
+            <p>If you want to change the color of the theme you just need to go in the <b>'head'</b>, uncomment the line that contains the color you want and comment the line with the color you want to remove.</p>
+            <p><b>For example,</b> if you want the blue instead of the red, you would do the following:</p>
+            <pre class="prettyprint">
+    &lt;!-- Color Scheme --&gt;
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/colors/red.css&quot;&gt; --&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/colors/blue.css&quot;&gt; 
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/colors/green.css&quot;&gt; --&gt;
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/colors/black.css&quot;&gt; --&gt;  
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/colors/yellow.css&quot;&gt; --&gt;</pre>            
+          <h3>How to change the version of the home section?</h3>
+          <p>This theme has three different styles for the home section, ready for use:</p>
+          <ul>
+            <li><b>Full Width Parallax Slider,</b> named <b>'index.html'</b></li>
+            <li><b>Pattern Background,</b> named <b>'pattern-bg.html'</b></li>
+            <li><b>Video Background,</b> named <b>'video-bg.html'</b></li>
+          </ul>
+          <p>In almost all hosting providers, the main page must be named index.html. So, if you want to use the <b>Pattern Background</b> or <b>Video Background</b> version, you need to rename it to <b>index.html,</b> but first, remember to rename the existing 'index.html' in parallax-bg.html, to not lose the <b>Full Width Parallax Slider</b> version.</p>
+          <h3>How to change the icons?</h3>
+          <p>All icons are provided with Font Awesome, their structure is similar to the following:</p>
+          <pre class="prettyprint">&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;</pre>
+          <p>If you want to change an icon on this theme, just find it at this <a href="fontawesome.io/icons/">link</a>, and, in this case, replace the 'fa-user' class, with the class of the icon you want.</p>
+          <h3>How to add or remove animations to elements?</h3>
+          <p>If you want to add animation to an element, you need to add to it the classes <b>"animated"</b> and <b>"hiding"</b> and set the <b>'data-animation'</b> attribute.</p>
+          <ul>
+            <li>The <b>animated</b> class add the animation to the element.</li>
+            <li>The <b>hiding</b> class make the element invisible until the animation is performed.</li>
+            <li>The <b>data-animation</b> is the name of the animation you want to use.</li>            
+          </ul>
+          <p><b>For example:</b></p>
+          <pre class="prettyprint">&lt;div class=&quot;promo animated hiding&quot; data-animation=&quot;fadeInRight&quot;&gt;
+...
+&lt;/div&gt;</pre>
+            <p>This example add the <b>fadeInRight</b> animation to the element.</p>
+            <p>If you want to animate a set of element one at a time, you need to add the <b>'data-delay'</b> attribute. <b>For example:</b></p>
+            <pre class="prettyprint">&lt;div class=&quot;service animated hiding&quot; data-animation=&quot;fadeInUp&quot; data-delay=&quot;0&quot;&gt;
+...
+&lt;/div&gt;
+&lt;div class=&quot;service animated hiding&quot; data-animation=&quot;fadeInUp&quot; data-delay=&quot;500&quot;&gt;
+...
+&lt;/div&gt;
+&lt;div class=&quot;service animated hiding&quot; data-animation=&quot;fadeInUp&quot; data-delay=&quot;1000&quot;&gt;
+...
+&lt;/div&gt;
+&lt;div class=&quot;service animated hiding&quot; data-animation=&quot;fadeInUp&quot; data-delay=&quot;1500&quot;&gt;
+...
+&lt;/div&gt;</pre>
+            <p>With this example, every 500 milliseconds an element is animated.</p>
+            <p>To remove animation from an element, you just need to remove the classes <b>"animated"</b> and <b>"hinding"</b> and remove the <b>"data-animation"</b> attribute.</p>
+            <p>You can find all available animations <a target="_blank" href="http://daneden.github.io/animate.css/">here</a></p>
+          </article>
+        </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; <a target="_blank" href="http://carmelopullara.com">Gazen</a> 2014</p>
+      </footer>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+  </body>
+</html>

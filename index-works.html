@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>Floyd - One Page Responsive Parallax Theme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Color Scheme -->
+    <link rel="stylesheet" type="text/css" href="css/colors/red.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/colors/blue.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/colors/green.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/colors/black.css"> -->  
+    <!-- <link rel="stylesheet" type="text/css" href="css/colors/yellow.css"> -->
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  </head>
+<body>  
+
+  <!-- Preloader
+  <div id="mask">
+    <div id="loader">      
+    </div>
+  </div>
+   End Preloader -->
+
+  <!-- Video Background-->
+  <div id="video-wrapper"></div>
+  <a id="bgndVideo" class="player" data-property="{videoURL:'miIjL0aHmnM',containment:'#video-wrapper',autoPlay:true, mute:true, startAt:0, opacity:1}">My video</a>
+  <!-- End Video Background-->
+  
+	<!-- Home Section -->  
+  <section id="home">    
+    <div class="container">
+      <div class="hero">
+        <hr>
+        <!-- Home Slider -->
+        <div class="home-slider">
+        <h1> Make a Wish</h1>
+        </div>
+      <form action="submit" id="wishwell">
+          <input id="wishes" type="text"><br>
+          <button id="submitWish" class="btn btn-empty btn-md">Post to board</button>
+        </form>
+        <!--test-->
+
+<button  id="dbutton"> Dynamic Button </button>
+<input id="msg" type="text" name="fname" value="Denvycom Rocks!!">
+    <br/>
+<div id="twtbox"></div>    
+    
+<script>
+    window.twttr = (function(d, s, id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = {
+            _e: [],
+            ready: function(f) {
+                t._e.push(f)
+            }
+        });
+    }(document, "script", "twitter-wjs"));
+</script>
+
+
+        <!--end of test-->
+<!--TEST 2-->
+<div class="vidBox" id="box">
+    <video class="vid" poster="http://www.rufan-redi.com/assets/lizard_goldeye.jpg" preload="metadata" controls="true" id="video1" height="240" width="360">
+        <source src="http://jcath-drg.s3.amazonaws.com/BigBuck.m4v" type="video/mp4">
+    </video>
+    <div id="other" style="display:none; width:100%; height:100%; background-color:#f0f0f0">
+        This appears after the video ends
+    </div>
+</div>
+<script>
+    var vid=document.getElementById('video1');
+    vid.addEventListener("ended", hideVideo, false);
+
+    function hideVideo() {
+        var vid=document.getElementById('video1');
+        var other=document.getElementById('other');
+        vid.removeEventListener("ended", hideVideo, false);
+        vid.style.display='none';
+        other.style.display='block';
+    }
+</script>
+</body> 
+</html>
+<!--END OF TEST 2-->
+        <!-- End Home Slider -->        
+        <!-- <hr> -->
+        <!-- <p class="center"><a href="#about" class="btn btn-empty btn-lg">Get Started</a></p> -->
+      </div>
+    </div>
+  </section>
+  <!-- End Home Section -->
+
+ <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/share" data-via="josephjohnbless">Tweet</a>                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+  
+
+
+
+    
+
+  <!-- JS Libraries -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/flexslider.js"></script>
+  <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+  <script type="text/javascript" src="js/jquery.nav.js"></script>
+  <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+  <script type="text/javascript" src="js/jquery.appear.js"></script>
+  <script type="text/javascript" src="js/jquery.countTo.js"></script>
+  <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+  <script type="text/javascript" src="js/jquery.validation.min.js"></script>
+  <script type="text/javascript" src="js/respond.js"></script>
+  <script type="text/javascript" src="js/video-bg.js"></script>
+  
+ 
+  <!-- Main.js File -->  
+  <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
