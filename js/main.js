@@ -10,6 +10,48 @@
   // firebase.initializeApp(config);
 
 
+var lock = new Auth0Lock('EQSZ7Mqp22Be0l7YCXgHHDBCLlpPn1QK', 'tylerharrisdesign.auth0.com');
+
+document.getElementById('btn-login').addEventListener('click', function() {
+  lock.show({ authParams: { scope: 'openid' } }); //Details: https://auth0.com/docs/scopes
+});
+var hash = lock.parseHash(window.location.hash);
+if (hash) {
+  if (hash.error) {
+    console.log("There was an error logging in", hash.error);
+    alert('There was an error: ' + hash.error + '\n' + hash.error_description);
+  } else {
+    //save the token in the session:
+    localStorage.setItem('id_token', hash.id_token);
+  }
+}
+//retrieve the profile:
+var id_token = localStorage.getItem('id_token');
+if (id_token) {
+  lock.getProfile(id_token, function (err, profile) {
+    if (err) {
+      return alert('There was an error getting the profile: ' + err.message);
+    }
+    document.getElementById('name').textContent = profile.name;
+  });
+}
+
+// var getFoos = fetch('/api/foo', {
+//   headers: {
+//     'Authorization': 'Bearer ' + localStorage.getItem('id_token')
+//   },
+//   method: 'GET',
+//   cache: false
+// });
+
+// getFoos.then(function (response) {
+//   response.json().then(function (foos) {
+//     console.log('the foos:', foos);
+//   });
+// });
+
+
+
 
 
 //functionality
